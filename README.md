@@ -171,9 +171,11 @@ iptables -A PREROUTING -t nat -d 10.151.77.144 -p tcp --dport 80 -j DNAT --to-de
 ```
 
 - Konfigurasi UML PROBOLINGGO dengan menambahkan syntax berikut:
+
 `iptables -t nat -A POSTROUTING -p tcp -d 192.168.5.3 --dport 80 -j SNAT --to-source 10.151.77.144:80`
 
 - Konfigurasi UML MADIUN dengan menambahkan syntax berikut:
+
 `iptables -t nat -A POSTROUTING -p tcp -d 192.168.5.2 --dport 80 -j SNAT --to-source 10.151.77.144:80`
 
 **Soal (7)**
