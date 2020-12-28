@@ -63,7 +63,7 @@ Pengerjaan modul 5 dikerjakan dengan menggunakan teknik CIDR (Classless Inter Do
 **Langkah 1**
 - Buat pembagian subnet dan hitung subnet pada tiap bagian seperti gambar berikut ini:
 
-![Gambar 2](Image/2.PNG)
+![Gambar 2](Image/2.png)
 
 **Langkah 2**
 - Hitung IP Address yang dibutuhkan (Jumlah Host, Router, dan Server). Pada soal ini ada kurang lebih 5845 IP Address maka subnet yang dipakai untuk membuat pohon IP yaitu subnet 19. 
@@ -84,5 +84,5 @@ Pengerjaan modul 5 dikerjakan dengan menggunakan teknik CIDR (Classless Inter Do
 **Langkah 3**
 - Buat file `topologi.sh` dengan isi seperti gambar berikut:
 
-![Gambar 4](Image/4.JPG)
+![Gambar 4](Image/4.jpg)
 
