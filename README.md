@@ -168,15 +168,11 @@ Soal Shift Modul 5 dikerjakan dengan menggunakan teknik CIDR (Classless Inter Do
 ```
 iptables -A PREROUTING -t nat -d 10.151.77.144 -p tcp --dport 80 -m statistic --mode nth --every 2 --packet 0 -j DNAT --to-destination 192.168.5.3:80
 iptables -A PREROUTING -t nat -d 10.151.77.144 -p tcp --dport 80 -j DNAT --to-destination 192.168.5.2:80
+
+iptables -t nat -A POSTROUTING -p tcp -d 192.168.5.3 --dport 80 -j SNAT --to-source 10.151.77.144:80
+iptables -t nat -A POSTROUTING -p tcp -d 192.168.5.2 --dport 80 -j SNAT --to-source 10.151.77.144:80
 ```
 
-- Konfigurasi UML PROBOLINGGO dengan menambahkan syntax berikut:
-
-`iptables -t nat -A POSTROUTING -p tcp -d 192.168.5.3 --dport 80 -j SNAT --to-source 10.151.77.144:80`
-
-- Konfigurasi UML MADIUN dengan menambahkan syntax berikut:
-
-`iptables -t nat -A POSTROUTING -p tcp -d 192.168.5.2 --dport 80 -j SNAT --to-source 10.151.77.144:80`
 
 **Soal (7)**
 - Bibah ingin agar semua paket didrop oleh firewall (dalam topologi) tercatat dalam log pada setiap UML yang memiliki aturan drop.
